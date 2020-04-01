@@ -39,7 +39,7 @@ WebDriver driver;
 
 		 driver.findElement(ach).click();
 	 }
-	 public void infopayment(String R,  String An, String Nba, String C) throws InterruptedException {
+	 public void paymentInfo(String R,  String An, String Nba, String C) throws InterruptedException {
 		 driver.findElement(routingno).sendKeys(R);
 		 driver.findElement(bankname).click();
 		 driver.findElement(accountno).sendKeys(An);

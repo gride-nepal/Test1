@@ -11,6 +11,7 @@ public class FirstTestcase {
 		 
 		
 		System.setProperty("webdriver.chrome.driver", "src/drivers/chromedriver");
+		
 		WebDriver driver = new ChromeDriver();
 		
 		driver.get("https://premierenroll.com");
@@ -64,7 +65,7 @@ public class FirstTestcase {
 		
 		PaymentInfo paymentInfo = new PaymentInfo(driver);
 		paymentInfo.payTo("Individual");
-		paymentInfo.infopayment("042000013", "6743647", "987483", "");
+		paymentInfo.paymentInfo("042000013", "6743647", "987483", "");
 		paymentInfo.next();
 		
 		

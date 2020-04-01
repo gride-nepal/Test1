@@ -2,45 +2,47 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 public class Landing {
-	
-	//Class Attribute of Type WebDriver
+
 	WebDriver driver;
-	//Making constructor of Landing Page which accepts WebDriver while making object og the Landing Class
-	public Landing(WebDriver args) {
-		driver = args;
+	
+	
+	public Landing(WebDriver passedDriver ) {
+		driver =passedDriver;
 	}
 	
 	
-	By codefield = By.id("search_acode");
-	By button = By.id("submit_agentcode");
+	By accessCodeField = By.id("search_acode");
+	By submitAgentCode = By.id("submit_agentcode");
+	By submitcode = By.id("submit_Agent");
+	
+	By repRegisteration = By.linkText("Rep Registration");
 	
 	
 	
+	public void submitAgentCode() {
+		driver.findElement(submitAgentCode).click();
+	}
+	
+	public void accesscode(String Code) {
+		driver.findElement(accessCodeField).sendKeys(Code);
+
+	}
+	 public void submitAgent() {
+		 driver.findElement(submitcode).click();
+	 }
+	
+		public void registerRep() {
+			
+			driver.findElement(repRegisteration).click();
+		}
+		
+	
+} 
+
+		
+		
 	
 
-	
-	//Method to enter Code in input field
-	public void enteraccesscode(String code) {
-		
-		//Locating Input field from landing page
-		WebElement accesscodefield = driver.findElement(codefield);
-		
-		// and entering value in accesscodeinput field
-		accesscodefield.sendKeys(code);
-	}
-	
-	
-	public void submitForm() {
-		
-		WebElement submitButton = driver.findElement(button);
-		submitButton.click();
-	
-		
-	}
-	
-	
-
-}

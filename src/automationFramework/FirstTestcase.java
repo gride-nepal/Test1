@@ -10,7 +10,7 @@ public class FirstTestcase {
 	public static void main(String[] args) throws InterruptedException {
 		 
 		
-		System.setProperty("webdriver.chrome.driver", "src/drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\14193\\git\\Test1\\src\\drivers\\chromedriver.exe");
 		
 		WebDriver driver = new ChromeDriver();
 		

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite verbose="10" name="Failed suite [Knorrium.info - Wordpress Demo]">
+  <parameter name="selenium.port" value="3737"/>
+  <parameter name="selenium.host" value="localhost"/>
+  <parameter name="selenium.browser" value="*firefox"/>
+  <parameter name="selenium.url" value="https://demo.opensourcecms.com/wordpress/"/>
+  <test thread-count="5" verbose="10" name="Write new post(failed)">
+    <classes>
+      <class name="automationFramework.NewTest">
+        <methods>
+          <include name="verify_login_funcation"/>
+          <include name="afterTest"/>
+          <include name="contact_info"/>
+          <include name="payment_info"/>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeClass"/>
+          <include name="f"/>
+          <include name="reg_info"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- automationFramework.NewTest -->
+    </classes>
+  </test> <!-- Write new post(failed) -->
+</suite> <!-- Failed suite [Knorrium.info - Wordpress Demo] -->
